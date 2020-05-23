@@ -1,12 +1,28 @@
 .recipeImage {
-    width: 100px;
-}
-
-.recipeCardContainer {
-    display: flex;
-    border: 1.5px solid black;
+    width: 200px;
 }
 
 .recipeContent {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    padding: 10px;
+    color: var(--font-color);
+}
+
+.recipeTitle {
     display: block;
+    font-size: 20px;
+}
+
+.recipeDetail {
+    display: block;
+    font-size: 15px;
+}
+
+
+.recipeCardContainer {
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--border-color);
 }
