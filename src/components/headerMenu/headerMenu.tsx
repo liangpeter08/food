@@ -14,7 +14,7 @@ export default function HeaderMenu(props: HeaderMenuProps) {
                 onClick={props.onClose} />
             <div className={css.menuChoicesContainer}>
                 <Link to="/view/" className={css.menuChoices} onClick={props.onClose}>Home</Link>
-                <Link to="/view/resume" className={css.menuChoices} onClick={props.onClose}>Resume</Link>
+                <Link to="/view/cart" className={css.menuChoices} onClick={props.onClose}>Resume</Link>
                 <Link to="/view/notes" className={css.menuChoices} onClick={props.onClose}>Notes</Link>
                 <Link to="/view/contact" className={css.menuChoices} onClick={props.onClose}>Contact</Link>
             </div>

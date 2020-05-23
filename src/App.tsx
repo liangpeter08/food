@@ -2,7 +2,7 @@ import * as React from 'react';
 import './App.css';
 import Header from './containers/header/header';
 import MainPageContent from './containers/mainPageContent/mainPageContent';
-import ResumeContents from './containers/ResumeContents/resumeContent';
+import Cart from './containers/Cart/cart';
 import Notes from './containers/Notes/notes';
 import css from './App.css';
 import {
@@ -18,8 +18,8 @@ class App extends React.Component {
         <div className={css.backgroundImg}>
           <Header />
           <Switch>
-            <Route path="/view/resume">
-              <ResumeContents />
+            <Route path="/view/cart">
+              <Cart />
             </Route>
             <Route path="/view/notes">
               <Notes />
@@ -27,7 +27,7 @@ class App extends React.Component {
             <Route path="/view/">
               <MainPageContent />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <MainPageContent />
             </Route>
           </Switch>

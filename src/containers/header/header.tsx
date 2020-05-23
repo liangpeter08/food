@@ -29,7 +29,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
         return (
             <div className={css.header}>
                 <div className={css.headerLeft}>
-                    <Link to="/view/resume" className={css.navTitle}>Home</Link>
+                    <Link to="/view/cart" className={css.navTitle}>Home</Link>
                     <Link to="/view/contact" className={css.navTitle}>Recipes</Link>
 
                 </div>
@@ -37,12 +37,12 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                     <div>
                         <img className={[css.headerSvg, css.logoSvg].join(' ')} src={logo} />
                         Meal Cravings
-                        <div className={css.slogan}> Cooking Made Easy </div>
+                        <div className={css.slogan}>Cooking Made Easy</div>
                     </div>
                 </Link>
                 <div className={css.navLinks}>
-                    <Link to="/view/resume" className={css.navTitle}>About</Link>
-                    <Link to="/view/resume" className={css.navTitle}>Login</Link>
+                    <Link to="/view/cart" className={css.navTitle}>About</Link>
+                    <Link to="/view/cart" className={css.navTitle}>Sign in</Link>
                     {/* {!this.state.expand ? <div className={css.headerSvg} dangerouslySetInnerHTML={{ __html: menu }}
                         onClick={this.handleMenuClick.bind(this, true)}>
                     </div> : <div className={css.headerSvg}></div>}
