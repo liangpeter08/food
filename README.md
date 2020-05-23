@@ -1,5 +1,7 @@
 ## Meal Cravings
 
+A simple webiste
+
 - reactjs
 - nodejs/expressjs
 - axios
