@@ -1,6 +1,7 @@
 {
   "name": "food",
   "version": "0.1.0",
+  "homepage": "./",
   "author": "peter.liang <ycpliang@gmail.com>",
   "main": "dist/bundle.js",
   "license": "UNLICENSED",
