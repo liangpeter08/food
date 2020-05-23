@@ -34,8 +34,11 @@ class Header extends React.Component<HeaderProps, HeaderState> {
 
                 </div>
                 <Link to="/" className={css.nameTitle}>
-                    <img className={[css.headerSvg, css.logoSvg].join(' ')} src={logo} />
-                    Food Made Easy
+                    <div>
+                        <img className={[css.headerSvg, css.logoSvg].join(' ')} src={logo} />
+                        Meal Cravings
+                        <div className={css.slogan}> Cooking Made Easy </div>
+                    </div>
                 </Link>
                 <div className={css.navLinks}>
                     <Link to="/view/resume" className={css.navTitle}>About</Link>
