@@ -5,3 +5,8 @@
     padding: 60px;
     font-size: 40px;
 }
+
+.recipeView {
+    display: flex;
+    justify-content: center;
+}

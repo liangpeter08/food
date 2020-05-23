@@ -1,53 +1,12 @@
-.wrapper {
-    background-color: var(--note-content);
-    border: none;
-    width: 194px;
-    min-height: 200px;
-    resize: none;
-    font-size: 18px;
-    padding: 3px;
-    /* for safari */
-    margin: 0;
+.recipeImage {
+    width: 100px;
 }
 
-::-webkit-scrollbar {
-   display: none;
-}
-
-.header {
+.recipeCardContainer {
     display: flex;
-    border: none;
-    width: min-content;
-    background-color: var(--note-header);
-    align-items: center;
-    width: 200px;
+    border: 1.5px solid black;
 }
 
-
-.deleteButton {
-    display: inline-block;
-    width: 18px;
-    fill: var(--font-color);
-}
-
-.title {
-    width: 118px;
-    height: 18px;
-    margin: 5px 8px;
-    border: none;
-    background-color: var(--note-header);
-}
-
-.saveButton {
-    width: 18px;
-    margin: 5px 10px;
-    cursor: pointer;
-}
-
-.deleteButton {
-    cursor: pointer;
-}
-
-.noteWrapper {
-    margin: 10px;
+.recipeContent {
+    display: block;
 }
