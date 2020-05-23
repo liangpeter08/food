@@ -1,43 +1,16 @@
-.gridTemplate {
+.cartContainer {
     display: grid;
-    grid-template-columns: min-content min-content min-content;
-    justify-self: center;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
 }
 
-.collapsedGrid {
-    display: grid;
-    grid-template-columns: min-content min-content min-content;
-    justify-self: center;
-    grid-template-rows: auto;
+.recipeCardList {
+    display: flex;
+    flex-direction: column;
 }
 
-@media only screen and (max-width: 1100px) {
-    .gridTemplate {
-        grid-template-columns: 0 1fr 0;
-    }
-    
-    .collapsedGrid {
-        display: flex;
-        flex-flow: column;
-        flex-direction: row-reverse;
-    }
+.recipeCard {
+    display: block;
+    padding: 20px;
+    width: min-content;
+    height: min-content;
 }
-
-.placeHolder,.content {
-    transition: 0.5s;
-    width: 10vw;
-}
-
-.collapsedGrid .placeHolder {
-    transition: 0.5s;
-    width: 0;
-}
-
-.collapsedGrid .content {
-    transition: 0.5s;
-    width: 30vw;
-    margin: 20px 2vw;
-    font-size: var(--font-size-large);
-    color: var(--font-color);
-};
