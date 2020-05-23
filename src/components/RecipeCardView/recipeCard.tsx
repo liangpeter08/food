@@ -10,7 +10,12 @@ const RecipeCard: FunctionComponent<RecipeCardProps> = () => {
         <div className={css.recipeCardContainer}>
             <img className={css.recipeImage} src={randomImage}></img>
             <div className={css.recipeContent}>
-                Test 123
+                <div className={css.recipeTitle}>
+                    Cookie Recipe
+                </div>
+                <div className={css.recipeDetail}>
+                    My first recipe is here
+                </div>
             </div>
         </div>
     );
