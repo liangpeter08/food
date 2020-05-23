@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'build.js',
+    publicPath: '/',
   },
   mode: 'production',
   module: {
@@ -72,6 +73,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       favicon: "./public/favicon.png",
       template: "./public/index.html",
+      publicPath: '/',
       inject: true,
     }),
   ],
