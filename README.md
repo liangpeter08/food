@@ -1,6 +1,7 @@
 ## Meal Cravings
 
-A simple webiste
+A simple website
+- Routes fixed
 
 - reactjs
 - nodejs/expressjs
