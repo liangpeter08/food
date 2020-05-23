@@ -5,12 +5,12 @@ const path = require('path');
 var cors = require('cors');
 
 const serverApi = require('./serverApi');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 const app = express();
 
-const indexPage = path.join(__dirname, '/dist',  '/index.html');
+const indexPage = path.join(__dirname, '/dist', '/');
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 
 var corsOptions = {
@@ -18,13 +18,12 @@ var corsOptions = {
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
-app.use("/view", cors(corsOptions), express.static(path.resolve(path.join(__dirname, '/dist'))));
-
-app.get('/view/*', cors(corsOptions), (req, res) => {
-  res.sendFile(indexPage);
-});
-
 serverApi.apiDef(app, cors);
+
+app.use(express.static(path.join(__dirname)));
+// app.get('*', cors(corsOptions), (req, res) => {
+//   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+// });
 
 app.use(cors(corsOptions), express.static(path.resolve(path.join(__dirname, '/dist'))));
 
