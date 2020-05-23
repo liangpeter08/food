@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './BlogContent.css';
+import css from './blogContent.css';
 import RecipeCard from '../../components/RecipeCardView/recipeCard';
 
 export default function BlogContent() {
