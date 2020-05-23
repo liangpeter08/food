@@ -29,8 +29,8 @@ class Header extends React.Component<HeaderProps, HeaderState> {
         return (
             <div className={css.header}>
                 <div className={css.headerLeft}>
-                    <Link to="/view/cart" className={css.navTitle}>Home</Link>
-                    <Link to="/view/contact" className={css.navTitle}>Recipes</Link>
+                    <Link to="/cart" className={css.navTitle}>Home</Link>
+                    <Link to="/contact" className={css.navTitle}>Recipes</Link>
 
                 </div>
                 <Link to="/" className={css.nameTitle}>
@@ -41,8 +41,8 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                     </div>
                 </Link>
                 <div className={css.navLinks}>
-                    <Link to="/view/cart" className={css.navTitle}>About</Link>
-                    <Link to="/view/cart" className={css.navTitle}>Sign in</Link>
+                    <Link to="/cart" className={css.navTitle}>About</Link>
+                    <Link to="/cart" className={css.navTitle}>Sign in</Link>
                     {/* {!this.state.expand ? <div className={css.headerSvg} dangerouslySetInnerHTML={{ __html: menu }}
                         onClick={this.handleMenuClick.bind(this, true)}>
                     </div> : <div className={css.headerSvg}></div>}

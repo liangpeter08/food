@@ -18,13 +18,13 @@ class App extends React.Component {
         <div className={css.backgroundImg}>
           <Header />
           <Switch>
-            <Route path="/view/cart">
+            <Route path="/cart">
               <Cart />
             </Route>
-            <Route path="/view/notes">
+            <Route path="/notes">
               <Notes />
             </Route>
-            <Route path="/view/">
+            <Route path="/">
               <MainPageContent />
             </Route>
             <Route exact path="/">
