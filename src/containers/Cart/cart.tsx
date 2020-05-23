@@ -1,10 +1,21 @@
 import React, { FunctionComponent } from 'react';
 import css from './cart.css';
+import RecipeCard from '../../components/RecipeCardView/recipeCard';
 
 
 const Cart: FunctionComponent = () => {
+    const sampleRecipeCards = new Array(10).fill(0).map(() => {
+        return (<div className={css.recipeCard}>
+            <RecipeCard />
+        </div>)
+    }
+    );
     return (
-        <div className={css.okay}>Hello</div>
+        <div className={css.cartContainer}>
+            <div className={css.recipeCardList}>
+                {sampleRecipeCards}
+            </div>
+        </div>
     );
 }
 
