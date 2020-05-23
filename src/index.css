@@ -1,6 +1,7 @@
 body { 
     margin: 0;
     background-color:var(--theme-color);
+    /* background-color: white; */
     color: #a7bbe2;
     font-family: 'Crimson Text', serif;
     font-size: 30px;

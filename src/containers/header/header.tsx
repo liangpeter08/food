@@ -1,7 +1,7 @@
 import * as React from 'react';
 import css from './header.css';
-import menu from '../../assets/menu.svg';
-import HeaderMenu from '../../components/headerMenu/headerMenu';
+// import menu from '../../assets/menu.svg';
+// import HeaderMenu from '../../components/headerMenu/headerMenu';
 import logo from '../../assets/logo2.png';
 import { Link } from 'react-router-dom';
 
@@ -39,12 +39,13 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 </Link>
                 <div className={css.navLinks}>
                     <Link to="/view/resume" className={css.navTitle}>About</Link>
-                    {!this.state.expand ? <div className={css.headerSvg} dangerouslySetInnerHTML={{ __html: menu }}
+                    <Link to="/view/resume" className={css.navTitle}>Login</Link>
+                    {/* {!this.state.expand ? <div className={css.headerSvg} dangerouslySetInnerHTML={{ __html: menu }}
                         onClick={this.handleMenuClick.bind(this, true)}>
                     </div> : <div className={css.headerSvg}></div>}
-                    {!this.state.expand && <div className={css.headerMenu} />}
+                    {!this.state.expand && <div className={css.headerMenu} />} */}
                 </div>
-                {this.state.expand ? <HeaderMenu onClose={this.handleMenuClick.bind(this, false)} /> : ''}
+                {/* {this.state.expand ? <HeaderMenu onClose={this.handleMenuClick.bind(this, false)} /> : ''} */}
             </div>
 
         );
