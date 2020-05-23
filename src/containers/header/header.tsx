@@ -3,7 +3,7 @@ import css from './header.css';
 import menu from '../../assets/menu.svg';
 import HeaderMenu from '../../components/headerMenu/headerMenu';
 import logo from '../../assets/logo2.png';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface HeaderProps {
 
@@ -22,26 +22,27 @@ class Header extends React.Component<HeaderProps, HeaderState> {
     }
 
     handleMenuClick(expand) {
-        this.setState({expand});
+        this.setState({ expand });
     }
 
     render() {
         return (
             <div className={css.header}>
                 <div className={css.headerLeft}>
-                    <img className={[css.headerSvg, css.logoSvg].join(' ')} src={logo}/>
-                    <Link to="/view/" className={[css.headerTitle, css.hide].join(' ')}>Software Engineer</Link>
+                    <Link to="/view/resume" className={css.navTitle}>Home</Link>
+                    <Link to="/view/contact" className={css.navTitle}>Recipes</Link>
+
                 </div>
                 <Link to="/" className={css.nameTitle}>
-                    Peter Liang
+                    <img className={[css.headerSvg, css.logoSvg].join(' ')} src={logo} />
+                    Food Made Easy
                 </Link>
                 <div className={css.navLinks}>
-                    <Link to="/view/resume" className={css.navTitle}>Resume</Link>
-                    <Link to="/view/contact" className={css.navTitle}>Contact</Link>
-                    {!this.state.expand ? <div className={css.headerSvg} dangerouslySetInnerHTML={{__html: menu}}
+                    <Link to="/view/resume" className={css.navTitle}>About</Link>
+                    {!this.state.expand ? <div className={css.headerSvg} dangerouslySetInnerHTML={{ __html: menu }}
                         onClick={this.handleMenuClick.bind(this, true)}>
                     </div> : <div className={css.headerSvg}></div>}
-                    {!this.state.expand && <div className={css.headerMenu}/>}
+                    {!this.state.expand && <div className={css.headerMenu} />}
                 </div>
                 {this.state.expand ? <HeaderMenu onClose={this.handleMenuClick.bind(this, false)} /> : ''}
             </div>

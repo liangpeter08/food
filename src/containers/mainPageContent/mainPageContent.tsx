@@ -13,22 +13,14 @@ export default function MainPageContent() {
                 <div className={css.topIntro}>
                 </div>
                 <div className={css.mainIntro}>
-                    Welcome to my website
+                    Browse For Recipes
                 </div>
                 <div className={[css.mainIntro, css.subIntro].join(' ')}>
-                    Check out my resume and my simple tools
+                    create your own shopping cart
                 </div>
             </div>
-
             <div className={css.content}>
-                <CustomButton text={"Contact Me"} onclick={() => {}} />
-            </div>
-            <div className={[css.content, css.reverseContent, css.footer].join(' ')}>
-                <span className={css.extra}>The source code is avaliable on</span>
-                <span> &nbsp; Github: &nbsp;</span>
-                <a href="https://github.com/liangpeter08/resumeProj">
-                    github.com/liangpeter08/resumeProj
-                </a>
+                <CustomButton text={"Let's Get Started"} onclick={() => { }} />
             </div>
         </div>
     );
