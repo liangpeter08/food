@@ -4,8 +4,8 @@ import RecipeCard from '../../components/RecipeCardView/recipeCard';
 
 
 const Cart: FunctionComponent = () => {
-    const sampleRecipeCards = new Array(10).fill(0).map(() => {
-        return (<div className={css.recipeCard}>
+    const sampleRecipeCards = new Array(10).fill(0).map((_, i) => {
+        return (<div key={i} className={css.recipeCard}>
             <RecipeCard />
         </div>)
     }
