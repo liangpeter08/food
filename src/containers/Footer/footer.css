@@ -26,7 +26,6 @@
 .signup {
     text-align: center;
     padding: 20px;
-    border-top: 1px solid;
 }
 
 .signupText {
@@ -40,6 +39,7 @@
 .sections {
     display: flex;
     justify-content: center;
+    padding: 30px;
 }
 
 .companyDescription {
@@ -59,7 +59,7 @@
 }
 
 .headerHr {
-    width: 40vw;
+    width: 70vw;
 }
 
 .navTitle {

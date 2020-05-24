@@ -37,6 +37,7 @@ export default function Footer() {
                 <Link to="/terms" className={css.navTitle}>Term of Use</Link>
             </div>
         </div>
+        <hr className={css.headerHr}></hr>
         <div className={css.signup}>
             <span className={css.signupText}>Signup for free</span>
             <CustomButton onclick={() => ({})} text={'SIGN UP!'} additionalClass={css.signupButton}></CustomButton>
