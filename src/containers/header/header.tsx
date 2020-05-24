@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [scrollOffSet, setScrollOffSet] = useState(0)
+    void setScrollOffSet;
     return (
         <>
             <div className={css.header} style={{ padding: `${40 + scrollOffSet}px 0`, borderBottom: scrollOffSet <= -30 ? '1px solid black' : '' }}>
