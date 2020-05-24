@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/logo2.png';
 import CustomButton from '../../components/customButton/customButton';
 
+
 export default function Footer() {
     return (<div className={css.body}>
         <div className={css.sections}>
@@ -30,8 +31,8 @@ export default function Footer() {
                 <Link to="/terms" className={css.navTitle}>Term of Use</Link>
             </div>
             <div className={css.linkSection}>
-                <div className={css.navTitle}>CONTACT US</div>
-                <Link to="/terms" className={css.navHeader}>About</Link>
+                <div className={css.navHeader}>CONTACT US</div>
+                <Link to="/terms" className={css.navTitle}>About</Link>
                 <Link to="/terms" className={css.navTitle}>Privacy Policies</Link>
                 <Link to="/terms" className={css.navTitle}>Contact Us</Link>
                 <Link to="/terms" className={css.navTitle}>Term of Use</Link>

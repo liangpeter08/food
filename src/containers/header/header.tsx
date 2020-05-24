@@ -1,39 +1,22 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import css from './header.css';
 // import menu from '../../assets/menu.svg';
 // import HeaderMenu from '../../components/headerMenu/headerMenu';
 import logo from '../../assets/logo2.png';
 import { Link } from 'react-router-dom';
 
-interface HeaderProps {
 
-};
-
-interface HeaderState {
-    expand: boolean;
-};
-
-class Header extends React.Component<HeaderProps, HeaderState> {
-    constructor(props: HeaderProps) {
-        super(props);
-        this.state = {
-            expand: false
-        };
-    }
-
-    handleMenuClick(expand) {
-        this.setState({ expand });
-    }
-
-    render() {
-        return (
-            <div className={css.header}>
+export default function Header() {
+    const [scrollOffSet, setScrollOffSet] = useState(0)
+    return (
+        <>
+            <div className={css.header} style={{ padding: `${40 + scrollOffSet}px 0`, borderBottom: scrollOffSet <= -30 ? '1px solid black' : '' }}>
                 <div className={css.headerLeft}>
                     <Link to="/cart" className={css.navTitle}>Home</Link>
                     <Link to="/contact" className={css.navTitle}>Recipes</Link>
 
                 </div>
-                <Link to="/" className={css.nameTitle}>
+                <Link to="/" className={css.nameTitle} style={{ padding: `${30 + scrollOffSet}px 0` }}>
                     <div>
                         <img className={[css.headerSvg, css.logoSvg].join(' ')} src={logo} />
                         Meal Cravings
@@ -50,10 +33,6 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 </div>
                 {/* {this.state.expand ? <HeaderMenu onClose={this.handleMenuClick.bind(this, false)} /> : ''} */}
             </div>
-
-        );
-    }
-};
-
-
-export default Header;
+            <div className={css.placeholder}></div>
+        </>);
+}
