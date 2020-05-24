@@ -4,12 +4,14 @@ import Header from './containers/header/header';
 import MainPageContent from './containers/mainPageContent/mainPageContent';
 import Cart from './containers/Cart/cart';
 import Notes from './containers/Notes/notes';
+import TermOfUse from './containers/TermOfUse/termOfUse';
 import css from './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import Footer from './containers/Footer/footer';
 
 class App extends React.Component {
   render() {
@@ -24,6 +26,9 @@ class App extends React.Component {
             <Route path="/notes">
               <Notes />
             </Route>
+            <Route path="/terms">
+              <TermOfUse />
+            </Route>
             <Route path="/">
               <MainPageContent />
             </Route>
@@ -31,7 +36,7 @@ class App extends React.Component {
               <MainPageContent />
             </Route>
           </Switch>
-
+          <Footer></Footer>
         </div>
       </Router>
     );

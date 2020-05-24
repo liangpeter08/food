@@ -1,0 +1,78 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39, 39, 39);
+    margin-top: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.navTitle {
+    font-size: 20px;
+    color: white;
+}
+
+.footerImg {
+    width: 80px;
+    filter: invert(1);
+}
+
+.copyright {
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+}
+
+.signup {
+    text-align: center;
+    padding: 20px;
+}
+
+.signupText {
+    padding-right: 30px;
+}
+
+.signupButton {
+    border-radius: 50px;
+}
+
+.sections {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.companyDescription {
+    width: 25vw;
+}
+
+.companyHeader {
+    width: max-content;
+    padding-left: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.websiteDescription {
+    font-size: 20px;
+}
+
+.headerHr {
+    width: 70vw;
+}
+
+.navTitle {
+    text-decoration: none;
+}
+
+.navTitle:hover {
+    text-decoration: underline;
+}
+
+.linkSection {
+    display: flex;
+    margin-left: 6vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
