@@ -1,0 +1,13 @@
+.ingredientContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.ingredientButton {
+    justify-content: center;
+}
+
+.ingredientText {
+    display: block;
+    justify-content: center;
+}
