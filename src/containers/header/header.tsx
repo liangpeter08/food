@@ -4,15 +4,22 @@ import css from './header.css';
 // import HeaderMenu from '../../components/headerMenu/headerMenu';
 import logo from '../../assets/logo2.png';
 import { Link } from 'react-router-dom';
-import { useViewportScroll, useTransform, motion } from "framer-motion";
+import { useViewportScroll, useTransform, motion, useSpring } from "framer-motion";
 
 export default function Header() {
     const { scrollY } = useViewportScroll();
     const yRange = useTransform(scrollY, [0, 300], [30, 0]);
     const [padding, setPadding] = useState(30);
+    const yBorder = useTransform(scrollY, [0, 100], [5, 0]);
+    const [border, setBorder] = useState(5);
+    const yRangeDamp = useSpring(yRange, { damping: 100 });
+    yRange.onChange(() => {
+        setBorder(yBorder.get());
+    });
 
-
-    scrollY.onChange(() => setPadding(yRange.get()));
+    yRangeDamp.onChange(() => {
+        setPadding(yRangeDamp.get());
+    });
 
     const transition = {
         type: "tween",
@@ -26,7 +33,7 @@ export default function Header() {
                     <Link to="/contact" className={css.navTitle}>Recipes</Link>
 
                 </div>
-                <Link to="/" className={css.nameTitle} style={{ padding: `${padding}px 0` }}>
+                <Link to="/" className={css.nameTitle} style={{ padding: `${padding}px 5px`, border: `${border}px solid black` }}>
                     <div>
                         <img className={[css.headerSvg, css.logoSvg].join(' ')} src={logo} />
                         Meal Cravings
