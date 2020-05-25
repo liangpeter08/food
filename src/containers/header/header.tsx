@@ -4,20 +4,29 @@ import css from './header.css';
 // import HeaderMenu from '../../components/headerMenu/headerMenu';
 import logo from '../../assets/logo2.png';
 import { Link } from 'react-router-dom';
-
+import { useViewportScroll, useTransform, motion } from "framer-motion";
 
 export default function Header() {
-    const [scrollOffSet, setScrollOffSet] = useState(0)
-    void setScrollOffSet;
+    const { scrollY } = useViewportScroll();
+    const yRange = useTransform(scrollY, [0, 300], [30, 0]);
+    const [padding, setPadding] = useState(30);
+
+
+    scrollY.onChange(() => setPadding(yRange.get()));
+
+    const transition = {
+        type: "tween",
+        duration: 1,
+    }
     return (
         <>
-            <div className={css.header} style={{ padding: `${40 + scrollOffSet}px 0`, borderBottom: scrollOffSet <= -30 ? '1px solid black' : '' }}>
+            <motion.div className={css.header} initial={{ scale: 0.1 }} animate={{ scale: 1 }} transition={transition} style={{ padding: `${padding + 5}px 0`, borderBottom: padding < 10 ? '1px solid black' : '' }}>
                 <div className={css.headerLeft}>
                     <Link to="/cart" className={css.navTitle}>Home</Link>
                     <Link to="/contact" className={css.navTitle}>Recipes</Link>
 
                 </div>
-                <Link to="/" className={css.nameTitle} style={{ padding: `${30 + scrollOffSet}px 0` }}>
+                <Link to="/" className={css.nameTitle} style={{ padding: `${padding}px 0` }}>
                     <div>
                         <img className={[css.headerSvg, css.logoSvg].join(' ')} src={logo} />
                         Meal Cravings
@@ -27,13 +36,8 @@ export default function Header() {
                 <div className={css.navLinks}>
                     <Link to="/cart" className={css.navTitle}>About</Link>
                     <Link to="/cart" className={css.navTitle}>Sign in</Link>
-                    {/* {!this.state.expand ? <div className={css.headerSvg} dangerouslySetInnerHTML={{ __html: menu }}
-                        onClick={this.handleMenuClick.bind(this, true)}>
-                    </div> : <div className={css.headerSvg}></div>}
-                    {!this.state.expand && <div className={css.headerMenu} />} */}
                 </div>
-                {/* {this.state.expand ? <HeaderMenu onClose={this.handleMenuClick.bind(this, false)} /> : ''} */}
-            </div>
+            </motion.div>
             <div className={css.placeholder}></div>
         </>);
 }
