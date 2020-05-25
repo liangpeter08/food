@@ -1,0 +1,17 @@
+.body {
+    display: block;
+    margin: 0 33vh;
+    color: var(--font-color); 
+}
+
+.body h2 {
+    font-size: 24px;
+}
+
+.body p {
+    font-size: 16px;
+}
+
+.body li {
+    font-size: 16px;
+}

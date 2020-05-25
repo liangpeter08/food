@@ -17,5 +17,3 @@ declare module "*.png" {
     var css: any;
     export = css
 }
-
-
