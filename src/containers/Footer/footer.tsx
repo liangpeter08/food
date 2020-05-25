@@ -30,13 +30,6 @@ export default function Footer() {
                 <Link to="/terms" className={css.navTitle}>Contact Us</Link>
                 <Link to="/terms" className={css.navTitle}>Term of Use</Link>
             </div>
-            <div className={css.linkSection}>
-                <div className={css.navHeader}>CONTACT US</div>
-                <Link to="/terms" className={css.navTitle}>About</Link>
-                <Link to="/terms" className={css.navTitle}>Privacy Policies</Link>
-                <Link to="/terms" className={css.navTitle}>Contact Us</Link>
-                <Link to="/terms" className={css.navTitle}>Term of Use</Link>
-            </div>
         </div>
         <hr className={css.headerHr}></hr>
         <div className={css.signup}>
