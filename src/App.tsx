@@ -6,7 +6,7 @@ import Cart from './containers/Cart/cart';
 import Notes from './containers/Notes/notes';
 import TermOfUse from './containers/TermOfUse/termOfUse';
 import Privacy from './containers/Privacy/privacy';
-import ContactUs from './containers/ContactUs/ContactUs';
+import ContactUs from './containers/ContactUs/contactUs';
 import css from './App.css';
 import {
   BrowserRouter as Router,
