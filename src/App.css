@@ -19,7 +19,7 @@
 
 .backgroundImg {
     display: grid;
-    grid-template-rows: min-content;
+    grid-template-rows: min-content 1fr auto;
     background-size: cover;
     position: absolute;
     width: 100%;
