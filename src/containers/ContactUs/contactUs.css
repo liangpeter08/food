@@ -1,0 +1,28 @@
+.contactContainer {
+    color: black;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactText {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submitButton {
+    margin: 30px;
+}
+
+.infoContainer {
+    width: 30vw;
+}
+
+.containerPadding {
+    margin-left: 40px;
+    width: 200px;
+    height: 25px;
+}
