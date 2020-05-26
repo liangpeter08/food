@@ -26,8 +26,8 @@ export default function Footer() {
             <div className={css.linkSection}>
                 <div className={css.navHeader}>USEFUL LINKS</div>
                 <Link to="/terms" className={css.navTitle}>About</Link>
-                <Link to="/terms" className={css.navTitle}>Privacy Policies</Link>
-                <Link to="/terms" className={css.navTitle}>Contact Us</Link>
+                <Link to="/privacy" className={css.navTitle}>Privacy Policies</Link>
+                <Link to="/contact" className={css.navTitle}>Contact Us</Link>
                 <Link to="/terms" className={css.navTitle}>Term of Use</Link>
             </div>
         </div>

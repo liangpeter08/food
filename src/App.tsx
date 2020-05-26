@@ -5,6 +5,8 @@ import MainPageContent from './containers/mainPageContent/mainPageContent';
 import Cart from './containers/Cart/cart';
 import Notes from './containers/Notes/notes';
 import TermOfUse from './containers/TermOfUse/termOfUse';
+import Privacy from './containers/Privacy/privacy';
+import ContactUs from './containers/ContactUs/ContactUs';
 import css from './App.css';
 import {
   BrowserRouter as Router,
@@ -28,6 +30,12 @@ class App extends React.Component {
             </Route>
             <Route path="/terms">
               <TermOfUse />
+            </Route>
+            <Route path="/privacy">
+              <Privacy />
+            </Route>
+            <Route path="/contact">
+              <ContactUs />
             </Route>
             <Route path="/">
               <MainPageContent />
