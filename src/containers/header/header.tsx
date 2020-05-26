@@ -29,8 +29,8 @@ export default function Header() {
         <>
             <motion.div className={css.header} initial={{ scale: 0.1 }} animate={{ scale: 1 }} transition={transition} style={{ padding: `${padding + 5}px 0`, borderBottom: padding < 10 ? '1px solid black' : '' }}>
                 <div className={css.headerLeft}>
-                    <Link to="/cart" className={css.navTitle}>Home</Link>
-                    <Link to="/contact" className={css.navTitle}>Recipes</Link>
+                    <Link to="/" className={css.navTitle}>Home</Link>
+                    <Link to="/cart" className={css.navTitle}>Recipes</Link>
 
                 </div>
                 <Link to="/" className={css.nameTitle} style={{ padding: `${padding}px 5px`, border: `${border}px solid black` }}>
@@ -41,8 +41,8 @@ export default function Header() {
                     </div>
                 </Link>
                 <div className={css.navLinks}>
-                    <Link to="/cart" className={css.navTitle}>About</Link>
-                    <Link to="/cart" className={css.navTitle}>Sign in</Link>
+                    <Link to="/cart" className={css.navTitle}>Cart</Link>
+                    <Link to="/signin" className={css.navTitle}>Sign in</Link>
                 </div>
             </motion.div>
             <div className={css.placeholder}></div>
