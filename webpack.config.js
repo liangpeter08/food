@@ -53,10 +53,15 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: "javascript/auto",
+      }
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.mjs'],
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

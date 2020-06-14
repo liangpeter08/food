@@ -6,7 +6,25 @@ import logo from '../../assets/logo2.png';
 import { Link } from 'react-router-dom';
 import { useViewportScroll, useTransform, motion, useSpring } from "framer-motion";
 
+import { API, graphqlOperation } from 'aws-amplify';
+import * as mutations from '../../graphql/mutations';
+import { CreateBlogInput } from '../../API';
+
+// Simple query
+async function getBlog() {
+    const input: CreateBlogInput = {
+        id: '1',
+        name: 'First Blog',
+    };
+    const allTodos = await API.graphql(graphqlOperation(mutations.createBlog,
+        {
+            input,
+        }));
+    console.log(allTodos);
+}
+
 export default function Header() {
+    getBlog();
     const { scrollY } = useViewportScroll();
     const yRange = useTransform(scrollY, [0, 300], [30, 0]);
     const [padding, setPadding] = useState(30);

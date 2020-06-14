@@ -8,6 +8,10 @@ import TermOfUse from './containers/TermOfUse/termOfUse';
 import Privacy from './containers/Privacy/privacy';
 import ContactUs from './containers/ContactUs/contactUs';
 import css from './App.css';
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
 import {
   BrowserRouter as Router,
   Switch,
