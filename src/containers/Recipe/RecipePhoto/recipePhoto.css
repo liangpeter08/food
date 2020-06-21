@@ -2,3 +2,24 @@
     width: 500px;
     padding-bottom: 40px;
 }
+
+.recipePhotoContainer {
+    display: grid;
+    grid-template-columns: 500px 200px;
+    grid-template-rows: auto;
+    grid-column-gap: 40px;
+}
+
+.recipeStats {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-left: 20px;
+    height: min-content;
+}
+
+.recipeStat {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: var(--font-color);
+    font-size: 15px;
+}
