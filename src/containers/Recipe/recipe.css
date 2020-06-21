@@ -1,0 +1,79 @@
+.recipeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 200px;
+}
+
+.recipeDescription{
+    color: var(--font-color);
+    display: flex;
+    justify-content: left;
+    font-size: 20px;
+}
+
+.recipeHeader {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-bottom: 40px;
+}
+
+.recipeName{
+    color: var(--font-color);
+    display: flex;
+    justify-content: left;
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+
+.recipeImage {
+    width: 500px;
+    padding-bottom: 40px;
+}
+
+.sectionTitle {
+    color: var(--font-color);
+    display: flex;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.ingredientList {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 40px;
+}
+
+.ingredient {
+    color: var(--font-color);
+    display: flex;
+    padding-bottom: 30px;
+    font-size: 15px;
+}
+
+.instruction {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 40px;
+}
+
+.stepList {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.step {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    font-size: 15px;
+}
