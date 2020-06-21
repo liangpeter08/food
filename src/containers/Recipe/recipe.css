@@ -1,6 +1,6 @@
 .recipeContainer {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     padding-left: 200px;
 }

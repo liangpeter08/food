@@ -13,6 +13,7 @@ const RecipeHeader: FunctionComponent = () => {
                 {sampleIngredientList}
             </div>
         </>
+    );
 }
 
 export default RecipeHeader;
