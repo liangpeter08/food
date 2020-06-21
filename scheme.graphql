@@ -1,0 +1,201 @@
+scheme.graphql
+
+
+type CookingRecipe {
+	id: ID!
+	name: String
+	pic: [String]
+	description: String
+	ingredients: [String]
+	steps: [String]
+}
+
+type CookingRecipeConnection {
+	items: [CookingRecipe]
+	nextToken: String
+}
+
+input CreateCookingRecipeInput {
+	name: String
+	pic: [String]
+	description: String
+	ingredients: [String]
+	steps: [String]
+}
+
+input CreateIngredInput {
+	name: String
+	pic: String
+	amazonId: String
+}
+
+input DeleteCookingRecipeInput {
+	id: ID!
+}
+
+input DeleteIngredInput {
+	id: ID!
+}
+
+type Mutation {
+	createIngred(input: CreateIngredInput!): ingred
+	updateIngred(input: UpdateIngredInput!): ingred
+	deleteIngred(input: DeleteIngredInput!): ingred
+	createCookingRecipe(input: CreateCookingRecipeInput!): CookingRecipe
+	updateCookingRecipe(input: UpdateCookingRecipeInput!): CookingRecipe
+	deleteCookingRecipe(input: DeleteCookingRecipeInput!): CookingRecipe
+}
+
+type Query {
+	getIngred(id: ID!): ingred
+	listIngreds(filter: TableIngredFilterInput, limit: Int, nextToken: String): ingredConnection
+	getCookingRecipe(id: ID!): CookingRecipe
+	listCookingRecipes(filter: TableCookingRecipeFilterInput, limit: Int, nextToken: String): CookingRecipeConnection
+}
+
+type Subscription {
+	onCreateIngred(
+		id: ID,
+		name: String,
+		pic: String,
+		amazonId: String
+	): ingred
+		@aws_subscribe(mutations: ["createIngred"])
+	onUpdateIngred(
+		id: ID,
+		name: String,
+		pic: String,
+		amazonId: String
+	): ingred
+		@aws_subscribe(mutations: ["updateIngred"])
+	onDeleteIngred(
+		id: ID,
+		name: String,
+		pic: String,
+		amazonId: String
+	): ingred
+		@aws_subscribe(mutations: ["deleteIngred"])
+	onCreateCookingRecipe(
+		id: ID,
+		name: String,
+		pic: [String],
+		description: String,
+		ingredients: [String]
+	): CookingRecipe
+		@aws_subscribe(mutations: ["createCookingRecipe"])
+	onUpdateCookingRecipe(
+		id: ID,
+		name: String,
+		pic: [String],
+		description: String,
+		ingredients: [String]
+	): CookingRecipe
+		@aws_subscribe(mutations: ["updateCookingRecipe"])
+	onDeleteCookingRecipe(
+		id: ID,
+		name: String,
+		pic: [String],
+		description: String,
+		ingredients: [String]
+	): CookingRecipe
+		@aws_subscribe(mutations: ["deleteCookingRecipe"])
+}
+
+input TableBooleanFilterInput {
+	ne: Boolean
+	eq: Boolean
+}
+
+input TableCookingRecipeFilterInput {
+	id: TableIDFilterInput
+	name: TableStringFilterInput
+	pic: TableStringFilterInput
+	description: TableStringFilterInput
+	ingredients: TableStringFilterInput
+	steps: TableStringFilterInput
+}
+
+input TableFloatFilterInput {
+	ne: Float
+	eq: Float
+	le: Float
+	lt: Float
+	ge: Float
+	gt: Float
+	contains: Float
+	notContains: Float
+	between: [Float]
+}
+
+input TableIDFilterInput {
+	ne: ID
+	eq: ID
+	le: ID
+	lt: ID
+	ge: ID
+	gt: ID
+	contains: ID
+	notContains: ID
+	between: [ID]
+	beginsWith: ID
+}
+
+input TableIngredFilterInput {
+	id: TableIDFilterInput
+	name: TableStringFilterInput
+	pic: TableStringFilterInput
+	amazonId: TableStringFilterInput
+}
+
+input TableIntFilterInput {
+	ne: Int
+	eq: Int
+	le: Int
+	lt: Int
+	ge: Int
+	gt: Int
+	contains: Int
+	notContains: Int
+	between: [Int]
+}
+
+input TableStringFilterInput {
+	ne: String
+	eq: String
+	le: String
+	lt: String
+	ge: String
+	gt: String
+	contains: String
+	notContains: String
+	between: [String]
+	beginsWith: String
+}
+
+input UpdateCookingRecipeInput {
+	id: ID!
+	name: String
+	pic: [String]
+	description: String
+	ingredients: [String]
+	steps: [String]
+}
+
+input UpdateIngredInput {
+	id: ID!
+	name: String
+	pic: String
+	amazonId: String
+}
+
+type ingred {
+	id: ID!
+	name: String
+	pic: String
+	amazonId: String
+}
+
+type ingredConnection {
+	items: [ingred]
+	nextToken: String
+}
