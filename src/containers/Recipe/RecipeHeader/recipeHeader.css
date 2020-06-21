@@ -1,0 +1,22 @@
+.recipeDescription{
+    color: var(--font-color);
+    display: flex;
+    justify-content: left;
+    font-size: 20px;
+}
+
+.recipeHeader {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-bottom: 40px;
+}
+
+.recipeName{
+    color: var(--font-color);
+    display: flex;
+    justify-content: left;
+    padding-bottom: 10px;
+    font-size: 40px;
+}

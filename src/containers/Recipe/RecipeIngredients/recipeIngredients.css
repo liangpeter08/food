@@ -1,0 +1,21 @@
+.sectionTitle {
+    color: var(--font-color);
+    display: flex;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.ingredientList {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 40px;
+}
+
+.ingredient {
+    color: var(--font-color);
+    display: flex;
+    padding-bottom: 30px;
+    font-size: 15px;
+}

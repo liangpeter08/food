@@ -1,0 +1,29 @@
+.sectionTitle {
+    color: var(--font-color);
+    display: flex;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.instruction {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 40px;
+}
+
+.stepList {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.step {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    font-size: 15px;
+}

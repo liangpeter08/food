@@ -3,6 +3,7 @@ import './App.css';
 import Header from './containers/header/header';
 import MainPageContent from './containers/mainPageContent/mainPageContent';
 import Cart from './containers/Cart/cart';
+import Recipe from './containers/Recipe/recipe'
 import Notes from './containers/Notes/notes';
 import TermOfUse from './containers/TermOfUse/termOfUse';
 import Privacy from './containers/Privacy/privacy';
@@ -37,6 +38,9 @@ class App extends React.Component {
             </Route>
             <Route path="/privacy">
               <Privacy />
+            </Route>
+            <Route path="/recipe">
+              <Recipe />
             </Route>
             <Route path="/contact">
               <ContactUs />
